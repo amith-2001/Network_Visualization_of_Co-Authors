@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            background-color: burlywood;
+            padding: 20px;
+            color: white;
+        }
+
+        .graph-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+        }
+    </style>
+    <title>Amith Ramaswamy</title>
+</head>
+<body>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="script.js"></script>
+    <div class="container">
+        <form id="controlForm">
+            <h1 margin-left="10px">Major Assignment 3 </h1>
+            <label for="linkStrength">Link Strength:</label>
+            <input type="text" id="linkStrength" value="1" placeholder="Enter value (0.1 to 2)">
+            <br>
+            
+            <label for="collideForce">Collide Force:</label>
+            <input type="text" id="collideForce" value="0" placeholder="Enter value (0 to 1)">
+            <br>
+            
+            <label for="chargeForce">Charge Force:</label>
+            <input type="text" id="chargeForce" value="-80" placeholder="Enter value (-200 to 10)">
+            <br>
+
+            <label>Node Size:</label>
+            <br>
+            <input type="radio" id="pubCount" name="nodeSize" value="publications">
+            <label for="pubCount">Number of Publications</label>
+
+            <input type="radio" id="degree" name="nodeSize" value="degree" checked>
+            <label for="degree">Degree</label>
+
+            <input type="radio" id="citationCount" name="nodeSize" value="citations">
+            <label for="citationCount">Number of Citations</label>
+            <br>
+            
+            <button id="applyChanges" type="button">Apply Changes</button>
+        </form>
+        <div class="tooltip" id="tooltip"></div>
+    </div>
+
+    <div class="graph-container">
+        <svg class="flex justify-center" width="1500" height="1300"></svg>
+    </div>
+</body>
+</html>

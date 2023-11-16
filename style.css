@@ -1,0 +1,19 @@
+
+  .flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensure the container takes the full height of the viewport */
+  }
+
+  svg {
+    max-width: 100%; /* Make sure SVG doesn't overflow its container */
+  }
+
+
+
+
+.tooltip.show {
+    opacity: 1;
+}
+
